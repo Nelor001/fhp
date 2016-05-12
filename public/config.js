@@ -2,6 +2,10 @@ System.config({
   baseURL: "/",
   defaultJSExtensions: true,
   transpiler: "typescript",
+  typescriptOptions:
+  {
+	  emitDecoratorMetadata:true;
+  },
   babelOptions: {
     "optional": [
       "runtime",

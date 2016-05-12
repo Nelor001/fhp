@@ -1,7 +1,7 @@
-import 'zone.js';
+/*import 'zone.js';
 import 'reflect-metadata';
 
-import { Component } from '@angular/core';
+*/import { Component } from '@angular/core';
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { Title } from '@angular/platform-browser';
 
