@@ -1,0 +1,85 @@
+{
+  "name": "fhp",
+  "description": "HP based on feathers",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src/",
+  "keywords": [
+    "feathers"
+  ],
+  "license": "MIT",
+  "repository": {},
+  "author": {},
+  "contributors": [],
+  "bugs": {},
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "test": "npm run jshint && npm run mocha",
+    "jshint": "jshint src/. test/. --config",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "cors": "^2.7.1",
+    "feathers": "^2.0.1",
+    "feathers-authentication": "^0.7.4",
+    "feathers-configuration": "^0.2.2",
+    "feathers-errors": "^2.1.0",
+    "feathers-hooks": "^1.5.2",
+    "feathers-rest": "^1.3.0",
+    "feathers-sequelize": "^1.1.4",
+    "feathers-socketio": "^1.4.0",
+    "mysql": "^2.10.2",
+    "passport": "^0.3.2",
+    "sequelize": "^3.21.0",
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "jspm": "^0.16.34",
+    "mocha": "^2.4.5",
+    "request": "^2.72.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+    "dependencies": {
+      "@angular/common": "npm:@angular/common@^2.0.0-rc.1",
+      "@angular/compiler": "npm:@angular/compiler@^2.0.0-rc.1",
+      "@angular/core": "npm:@angular/core@^2.0.0-rc.1",
+      "@angular/http": "npm:@angular/http@^2.0.0-rc.1",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.0.0-rc.1",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.0.0-rc.1",
+      "@angular/router": "npm:@angular/router@^2.0.0-rc.1",
+      "@angular/router-deprecated": "npm:@angular/router-deprecated@^2.0.0-rc.1",
+      "@angular/upgrade": "npm:@angular/upgrade@^2.0.0-rc.1",
+      "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
+      "es6-shim": "github:es-shims/es6-shim@^0.35.0",
+      "feathers": "npm:feathers@^2.0.1",
+      "feathers-authentication": "npm:feathers-authentication@^0.7.7",
+      "feathers-client": "npm:feathers-client@^1.2.0",
+      "feathers-hooks": "npm:feathers-hooks@^1.5.2",
+      "feathers-localstorage": "npm:feathers-localstorage@^0.4.0",
+      "feathers-memory": "npm:feathers-memory@^0.7.1",
+      "feathers-query-filters": "npm:feathers-query-filters@^1.5.1",
+      "feathers-rest": "npm:feathers-rest@^1.3.0",
+      "feathers-socketio": "npm:feathers-socketio@^1.4.0",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.3",
+      "rxjs": "npm:rxjs@^5.0.0-beta.7",
+      "socket.io-client": "npm:socket.io-client@^1.4.6",
+      "zone.js": "npm:zone.js@^0.6.12"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4",
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}

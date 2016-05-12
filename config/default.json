@@ -1,0 +1,22 @@
+{
+	"host": "localhost",
+	"port": 3030,
+	"mysql": "mysql://root:@localhost:3306/fhp",
+	"public": "../public/",
+	"auth":
+	{
+		"idField": "id",
+		"token":
+		{
+			"secret": "f1Edq8wGNPBJjK6xDtW1/btojP9zIvOAeLo0bELVjJm4vczdsXQedspzBuo17c/wkd5o6tpNWfHJVSlJgIblEA==",
+			"payload": ["id","login"],
+			"issuer":"fhp",
+			"expiresIn":"900s",
+			"algorithm":"HS512"
+		},
+		"local":
+		{
+			"usernameField":"id"
+		}
+	}
+}
