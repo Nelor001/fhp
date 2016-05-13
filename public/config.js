@@ -2,9 +2,17 @@ System.config({
   baseURL: "/",
   defaultJSExtensions: true,
   transpiler: "typescript",
+  packages:
+  {
+		"app":
+		{
+			"main": "main",
+			"defaultExtension": "ts"
+		}
+  },
   typescriptOptions:
   {
-	  emitDecoratorMetadata:true;
+	  emitDecoratorMetadata:true
   },
   babelOptions: {
     "optional": [
