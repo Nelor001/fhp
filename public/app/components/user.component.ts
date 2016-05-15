@@ -7,17 +7,17 @@ import userService from '../services/user.service.ts';
 @Component({
   selector: 'hp',
   providers: [ userService ],
-  template:`
+  template:'<div>LOADED</div>'/*`
   <ul>
-	<li *ngFor="let user of users" >{{user.login}}</li>
+	<li *ngFor="let user of _users" >{{user.login}}</li>
   </ul>
   <div *ngIf="error">ERROR!!!!!!</div>
-  `
+  `*/
 })
 export class hp
 {
 	
-	private _users:any[];
+	private _users:any[] = [];
 	private socket:Socket;
 	private _userService:userService;
 	private error:boolean;

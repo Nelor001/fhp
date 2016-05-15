@@ -3,7 +3,7 @@
   "description": "HP based on feathers",
   "version": "0.0.0",
   "homepage": "",
-  "main": "src/",
+  "main": "main.ts",
   "keywords": [
     "feathers"
   ],
@@ -59,7 +59,6 @@
       "@angular/router": "npm:@angular/router@^2.0.0-rc.1",
       "@angular/router-deprecated": "npm:@angular/router-deprecated@^2.0.0-rc.1",
       "@angular/upgrade": "npm:@angular/upgrade@^2.0.0-rc.1",
-      "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
       "es6-shim": "github:es-shims/es6-shim@^0.35.0",
       "feathers": "npm:feathers@^2.0.1",
       "feathers-authentication": "npm:feathers-authentication@^0.7.7",
@@ -70,16 +69,141 @@
       "feathers-query-filters": "npm:feathers-query-filters@^1.5.1",
       "feathers-rest": "npm:feathers-rest@^1.3.0",
       "feathers-socketio": "npm:feathers-socketio@^1.4.0",
+      "plugin-typescript": "github:frankwallis/plugin-typescript@^4.0.10",
       "reflect-metadata": "npm:reflect-metadata@^0.1.3",
       "rxjs": "npm:rxjs@^5.0.0-beta.7",
       "socket.io-client": "npm:socket.io-client@^1.4.6",
+      "traceur": "github:jmcriffey/bower-traceur@^0.0.108",
       "zone.js": "npm:zone.js@^0.6.12"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4",
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
       "typescript": "npm:typescript@^1.6.2"
+    },
+    "peerDependencies": {
+      "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
+      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+      "child_process": "github:jspm/nodelibs-child_process@^0.2.0-alpha",
+      "cluster": "github:jspm/nodelibs-cluster@^0.2.0-alpha",
+      "constants": "github:jspm/nodelibs-constants@^0.2.0-alpha",
+      "crypto": "github:jspm/nodelibs-crypto@^0.2.0-alpha",
+      "eventemitter3": "npm:eventemitter3@^1.2.0",
+      "events": "github:jspm/nodelibs-events@^0.2.0-alpha",
+      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+      "http": "github:jspm/nodelibs-http@^0.2.0-alpha",
+      "https": "github:jspm/nodelibs-https@^0.2.0-alpha",
+      "net": "github:jspm/nodelibs-net@^0.2.0-alpha",
+      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+      "querystring": "github:jspm/nodelibs-querystring@^0.2.0-alpha",
+      "stream": "github:jspm/nodelibs-stream@^0.2.0-alpha",
+      "string_decoder": "github:jspm/nodelibs-string_decoder@^0.2.0-alpha",
+      "tls": "github:jspm/nodelibs-tls@^0.2.0-alpha",
+      "tty": "github:jspm/nodelibs-tty@^0.2.0-alpha",
+      "url": "github:jspm/nodelibs-url@^0.2.0-alpha",
+      "util": "github:jspm/nodelibs-util@^0.2.0-alpha",
+      "vm": "github:jspm/nodelibs-vm@^0.2.0-alpha",
+      "zlib": "github:jspm/nodelibs-zlib@^0.2.0-alpha"
+    },
+    "overrides": {
+      "npm:babel-core@5.8.38": {
+        "main": "browser.js",
+        "dependencies": {},
+        "jspmNodeConversion": false,
+        "map": {
+          "regenerator/runtime": "babel-runtime/regenerator/runtime"
+        },
+        "meta": {
+          "browser.js": {
+            "exports": "babel",
+            "format": "global"
+          }
+        }
+      },
+      "npm:babel-runtime@5.8.38": {
+        "main": false,
+        "dependencies": {},
+        "optionalDependencies": {
+          "core-js": "^1.2.0"
+        }
+      },
+      "npm:browserify-zlib@0.1.4": {
+        "dependencies": {
+          "readable-stream": "^2.0.2",
+          "pako": "~0.2.0"
+        },
+        "map": {
+          "_stream_transform": "readable-stream/transform"
+        }
+      },
+      "npm:engine.io@1.6.9": {
+        "dependencies": {
+          "base64id": "0.1.0",
+          "debug": "2.2.0",
+          "ws": "1.0.1",
+          "engine.io-parser": "1.2.4",
+          "accepts": "1.3.1"
+        }
+      },
+      "npm:inherits@2.0.1": {
+        "ignore": [
+          "test.js"
+        ]
+      },
+      "npm:readable-stream@1.1.14": {
+        "map": {
+          "stream": "stream-browserify/index"
+        },
+        "systemjs": {
+          "main": "readable.js"
+        },
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.1",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.0",
+          "stream-browserify": "^1.0.0"
+        }
+      },
+      "npm:reflect-metadata@0.1.3": {
+        "jspmNodeConversion": false,
+        "map": {
+          "crypto": {
+            "node": "@node/crypto",
+            "default": "@empty"
+          }
+        }
+      },
+      "npm:socket.io-client@1.4.6": {
+        "main": "lib/index.js"
+      },
+      "npm:socket.io@1.4.6": {
+        "map": {
+          "socket.io-client/package": "socket.io-client/package.json"
+        }
+      },
+      "npm:typescript@1.8.10": {
+        "browser": {},
+        "map": {
+          "buffer": "@empty",
+          "child_process": "@empty",
+          "fs": "@empty",
+          "path": "@empty",
+          "process": "@empty",
+          "readline": "@empty"
+        }
+      },
+      "npm:ws@1.0.1": {
+        "dependencies": {
+          "options": ">=0.0.5",
+          "ultron": "1.0.x",
+          "utf-8-validate": "1.2.x",
+          "bufferutil": "1.2.x"
+        }
+      }
     }
   }
-}
+}
